@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-tg0o(7kv7d20#vja+h8++idv-tcy+hsscp(tgii-#0bt=8=e#(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://mycontacts-backend.herokuapp.com/']
+ALLOWED_HOSTS = ['mycontacts-backend.herokuapp.com']
 
 
 
@@ -45,30 +45,19 @@ INSTALLED_APPS = [
     'corsheaders'
 ]
 
-# MIDDLEWARE = [
-#     'corsheaders.middleware.CorsMiddleware',
-#     'django.middleware.security.SecurityMiddleware',
-#     'django.contrib.sessions.middleware.SessionMiddleware',
-#     'django.middleware.common.CommonMiddleware',
-#     'django.middleware.csrf.CsrfViewMiddleware',
-#     'django.contrib.auth.middleware.AuthenticationMiddleware',
-#     'django.contrib.messages.middleware.MessageMiddleware',
-#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-# ]
-
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # Certifique-se de que o CorsMiddleware está aqui
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',  # Certifique-se de que esse middleware está depois do CorsMiddleware
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    '*',  # Adicione a URL do seu aplicativo Angular aqui
+    'http://localhost:4200',  # Adicione a URL do seu aplicativo Angular aqui
 ]
 
 CORS_ALLOW_METHODS = [
