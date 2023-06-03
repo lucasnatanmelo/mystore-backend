@@ -20,3 +20,12 @@ Para realização do deploy:
 
   Criar arquivo de requirements:
     pip freeze > requirements.txt
+
+  Após aplicar todas as mudanças, realizar push para heroku:
+    git push heroku master
+
+  Criação de DB:
+    heroku addons:create heroku-postgresql 
+  
+  Realizar migrações - criação de tabelas:
+    heroku run python manage.py migrate 

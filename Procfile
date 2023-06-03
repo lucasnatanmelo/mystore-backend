@@ -1,1 +1,1 @@
-web: gunicord mystore.wsgi
+web: gunicorn mystore.wsgi
