@@ -57,7 +57,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:4200',  # Adicione a URL do seu aplicativo Angular aqui
+    'http://localhost:4200',  
+    'https://mystore-vercel.vercel.app'
 ]
 
 CORS_ALLOW_METHODS = [
