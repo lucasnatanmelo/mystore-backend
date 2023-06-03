@@ -1,0 +1,1 @@
+web: gunicord mystore.wsgi

@@ -1,0 +1,22 @@
+Realizar deploy na Heroku:
+  https://www.youtube.com/watch?v=SBBzVbZBOvc
+
+  Verificar se o banco de dados sera persistido
+
+
+Para realização do deploy:
+
+  Adicionar nas configurações:
+    ALLOWED_HOSTS = ['https://mycontacts-backend.herokuapp.com/']
+    ROOT_URLCONF = 'mystore.urls'
+
+  Criar arquivo Procfile
+
+  Instalar:
+    pip install django-heroku
+    pip install gunicorn
+  
+  django_heroku.settings(locals())
+
+  Criar arquivo de requirements:
+    pip freeze > requirements.txt
