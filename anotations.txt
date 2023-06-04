@@ -7,7 +7,7 @@ Realizar deploy na Heroku:
 Para realização do deploy:
 
   Adicionar nas configurações:
-    ALLOWED_HOSTS = ['https://mycontacts-backend.herokuapp.com/']
+    ALLOWED_HOSTS = ['my-store-backend.herokuapp.com']
     ROOT_URLCONF = 'mystore.urls'
 
   Criar arquivo Procfile
