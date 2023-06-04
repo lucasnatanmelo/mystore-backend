@@ -25,12 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# DISCLAIMER: For studies practices, I will keep it visible
+SECRET_KEY = 'django-insecure-tg0o(7kv7d20#vja+h8++idv-tcy+hsscp(tgii-#0bt=8=e#('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['my-store-backend.herokuapp.com']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['my-store-backend.herokuapp.com']
 
 # Application definition
 
@@ -57,8 +60,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    # 'http://localhost:4200',  # Allow if localhost 
-    'https://mystore-vercel.vercel.app'
+    'http://localhost:4200',  # Allow if localhost 
+    # 'https://mystore-vercel.vercel.app'
 ]
 
 CORS_ALLOW_METHODS = [
@@ -92,24 +95,30 @@ WSGI_APPLICATION = 'mystore.wsgi.application'
 
 # ...
 
-# Obtenha a URL de conexão do banco de dados do ambiente do Heroku
-db_from_env = dj_database_url.config(conn_max_age=600)
+# =================== Uncomment to use local SQlite DB ================
 
 # Original Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# Postgresql - Heroku 
 DATABASES = {
-    'default': db_from_env
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
+# =================== Uncomment to connect to Heroku Postgresql ================
+
+# Obtenha a URL de conexão do banco de dados do ambiente do Heroku
+# db_from_env = dj_database_url.config(conn_max_age=600)
+
+
+# # Postgresql - Heroku 
+# DATABASES = {
+#     'default': db_from_env
+# }
+
+# ==============================================================================
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
