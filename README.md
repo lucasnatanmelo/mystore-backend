@@ -12,6 +12,17 @@ Execute no terminal na pasta fonte do projeto:
 pip install -r requirements.txt
 ```
 
+## Configuração de Banco de dados local - SQLite3
+Execute no terminal:
+```bash
+python manage.py makemigrations
+```
+
+Após bem-sucedido:
+```bash
+python manage.py migrate
+```
+
 ## Servidor de desenvolvimento
 Execute no terminal:
 ```bash

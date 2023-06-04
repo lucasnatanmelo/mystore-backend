@@ -33,6 +33,8 @@ SECRET_KEY = 'django-insecure-tg0o(7kv7d20#vja+h8++idv-tcy+hsscp(tgii-#0bt=8=e#(
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+
+# Uncomment to setup in Heroku
 # ALLOWED_HOSTS = ['my-store-backend.herokuapp.com']
 
 # Application definition
@@ -61,7 +63,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',  # Allow if localhost 
-    # 'https://mystore-vercel.vercel.app'
+    # 'https://mystore-vercel.vercel.app' # Uncomment to setup in Heroku
 ]
 
 CORS_ALLOW_METHODS = [
