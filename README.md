@@ -1,6 +1,6 @@
 # MyStore - Back-end
 
-Este projeto é responsável por fornecer uma API RESTful para simular um sistema de estoque de produtos. É permitido realizar operações como listar, criar, atualizar e excluir produtos. Foi criado com a versão 4.2.1 do [Django](https://www.djangoproject.com/) sendo hospedado no servidor da [Heroku](https://heroku.com). A aplicação [Angular](https://github.com/angular/angular-cli) base encontra-se no domínio [https://mystore-vercel.vercel.app/](https://mystore-fe.vercel.app/)
+Este projeto é responsável por fornecer uma API RESTful para simular um sistema de estoque de produtos. É permitido realizar operações como listar, criar, atualizar e excluir produtos. Foi criado com a versão 4.2.1 do [Django](https://www.djangoproject.com/) sendo hospedado no servidor da [Heroku](https://heroku.com). A aplicação [Angular](https://github.com/angular/angular-cli) base encontra-se no domínio [https://mystore-fe.vercel.app/](https://mystore-fe.vercel.app/)
 
 
 ## Requisitos básicos
